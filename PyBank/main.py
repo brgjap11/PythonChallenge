@@ -21,7 +21,7 @@ RevenueChangeSum = 0
 Counter = 0
 x=0
 Revenue_Change_Total = 0
-output_file= "financial_analysis"
+
 
 #importing  csv file 
 with open(User_Analysis_File,newline="")as csvfile:
@@ -76,11 +76,12 @@ print ("Average Revenue Change: " + "$" + str(Average_Revenue_Change))
 print ("Greatest Increase in Revenue: " + str(Max_Revenue_Change_Date) + "  $"+ str(Max_Revenue_Change))
 print ("Greatest Decrease in Revenue: " + str(Min_Revenue_Change_Date) + "  $"+ str(Min_Revenue_Change))
 
-sys.stdout = open(User_Analysis_File, 'w') as txtfile:
-print ("Financial Analysis")
-print ("----------------------------")
-print ("Total Months: "+ str(Months))
-print ("Total Revenue: "+ "$" + str(TotalRevenue))
-print ("Average Revenue Change: " + "$" + str(Average_Revenue_Change))
-print ("Greatest Increase in Revenue: " + str(Max_Revenue_Change_Date) + "  $"+ str(Max_Revenue_Change))
-print ("Greatest Decrease in Revenue: " + str(Min_Revenue_Change_Date) + "  $"+ str(Min_Revenue_Change))
+output_file= open("financial_analysis.txt","w+")
+output_file.write("Financial Analysis")
+output_file.write("----------------------------")
+output_file.write("Total Months: "+ str(Months)
+output_file.write("Total Revenue: " + "  $" + str(TotalRevenue))
+output_file.write("Average Revenue Change: " + "$" + str(Average_Revenue_Change))
+output_file.write("Greatest Increase in Revenue: " + str(Max_Revenue_Change_Date) + "  $"+ str(Max_Revenue_Change))
+output_file.write("Greatest Decrease in Revenue: " + str(Min_Revenue_Change_Date) + "  $"+ str(Min_Revenue_Change))
+output_file.close()

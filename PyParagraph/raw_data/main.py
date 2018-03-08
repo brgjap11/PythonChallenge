@@ -48,3 +48,5 @@ print ("Approximate Sentence Count is: " + str(Sentence_Count))
 print ("Approximate Letter Count is: " + str (Letter_Count))
 print ("Average Letter Count is: "+ str(Average_Letter_Count))
 print ("Average Sentence Length is: " + str(Average_Sentence_Length))
+
+
